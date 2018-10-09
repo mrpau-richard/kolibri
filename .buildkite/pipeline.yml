@@ -28,6 +28,9 @@ steps:
 
   - wait
 
+  - label: Upload second artifacts
+    command: .buildkite/setup_and_upload_artifact.sh
+
   - label: Cleaning up
     command: make docker-clean
 
