@@ -32,7 +32,9 @@ steps:
   - wait
 
   - label: Upload second artifacts
-    command: .buildkite/setup_and_upload_artifact.sh
+    command:
+        - buildkite-agent artifact download "dist/*.exe" . --step "Sign Windows installer"
+        - .buildkite/setup_and_upload_artifact.sh
 
   - block: "Create APK?"
   - label: Build the Android APK file
