@@ -5,4 +5,4 @@ rem After the installer successfully sign it will upload the installer at the Si
 
 set current_path=%cd%
 buildkite-agent.exe artifact download "dist/*.exe" . --step "Build Windows installer" --build %BUILDKITE_BUILD_ID% --agent-access-token %BUILDKITE_AGENT_ACCESS_TOKEN%
-%WINDOWS_SIGN_SCRIPT_PATH% "%current_path%\dist" && cd "%current_path%\dist\" && ren *.exe *-.exe && buildkite-agent.exe artifact upload "*.exe"
+%WINDOWS_SIGN_SCRIPT_PATH% "%current_path%\dist" && cd "%current_path%\dist\" && ren *.exe *-signed.exe && buildkite-agent.exe artifact upload "*.exe"
