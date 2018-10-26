@@ -31,7 +31,7 @@ REPO_OWNER = "mrpau-richard"
 REPO_NAME = "kolibri"
 ISSUE_ID = os.getenv("BUILDKITE_PULL_REQUEST")
 BUILD_ID = os.getenv("BUILDKITE_BUILD_NUMBER")
-TAG = os.getenv("BUILDKITE_TAG")
+TAG = "v0.4.0-alpha1"
 COMMIT = os.getenv("BUILDKITE_COMMIT")
 
 
