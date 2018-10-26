@@ -36,6 +36,7 @@ buildkite-agent artifact download 'dist/*.pex' dist/
 buildkite-agent artifact download 'dist/*.whl' dist/
 buildkite-agent artifact download 'dist/*.tar.gz' dist/
 buildkite-agent artifact download 'dist/*.deb' dist/
+buildkite-agent download *.exe dist/ --step "Sign Windows installer" --build $BUILDKITE_BUILD_ID --agent-access-token $BUILDKITE_AGENT_ACCESS_TOKEN
 buildkite-agent artifact download 'dist/*.exe' dist/
 
 $PYTHON_CMD
