@@ -27,7 +27,7 @@ from github3 import login
 logging.getLogger().setLevel(logging.INFO)
 
 ACCESS_TOKEN = os.getenv("GITHUB_ACCESS_TOKEN")
-REPO_OWNER = "learningequality"
+REPO_OWNER = "mrpau-richard"
 REPO_NAME = "kolibri"
 ISSUE_ID = os.getenv("BUILDKITE_PULL_REQUEST")
 BUILD_ID = os.getenv("BUILDKITE_BUILD_NUMBER")
