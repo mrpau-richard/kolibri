@@ -155,6 +155,8 @@ def collect_local_artifacts():
                 data.update(file_manifest[file_extension])
                 logging.info("Collect file data: (%s)" % data)
                 artifacts_dict[file_extension] = data
+    logging.info("Artifact filter: %s" % (artifact_dir))
+    logging.info("Artifact upload: %s" % (artifacts_dict))
     create_artifact_data(DIST_DIR)
     return artifacts_dict
 
